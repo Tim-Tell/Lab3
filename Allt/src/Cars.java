@@ -9,21 +9,23 @@ public abstract class Cars implements Movable {
     private double currentSpeed; // The current speed of the car
     private Color color; // Color of the car
     private String modelName; // The car model name
-    private double posX = 0;   // Position X of the car
-    private double posY = 0;   // Position Y of the car
+    private double posX;   // Position X of the car
+    private double posY;   // Position Y of the car
     private String direction;  // Direction of the car
 
     public abstract double speedFactor();
 
 
 
-    public Cars(int nrDoors, double enginePower, Color color, String modelName, String direction){
+    public Cars(int nrDoors, double enginePower, Color color,
+                String modelName, String direction) {
         this.nrDoors = nrDoors;
         this.enginePower = enginePower;
         this.color = color;
         this.modelName = modelName;
         this.direction = direction;
         stopEngine();
+
     }
 
     protected int GetnrDoors() {
@@ -41,8 +43,8 @@ public abstract class Cars implements Movable {
     protected String getDirection() {
         return direction;
     }
-    protected void SetcurrentSpeed(double currentSpeed) {
-        this.currentSpeed = currentSpeed;
+    protected void startEngine() {
+        currentSpeed = 0.1;
     }
 
 
@@ -68,6 +70,14 @@ public abstract class Cars implements Movable {
     }
     protected double getPosY(){
         return posY;
+    }
+
+    public void setPosY(double place){
+        posY = place;
+    }
+
+    public void setPosX(double place){
+        posX = place;
     }
 
     public void move() {

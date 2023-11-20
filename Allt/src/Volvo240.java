@@ -12,10 +12,6 @@ public class Volvo240 extends Cars {
         super(4, 100, Color.black, "Volvo240", "North");
     }
 
-    protected void startEngine() {
-
-        SetcurrentSpeed(0.1);
-    }
 
     public double speedFactor() {
 

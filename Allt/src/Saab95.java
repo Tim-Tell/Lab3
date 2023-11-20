@@ -7,13 +7,9 @@ public class Saab95 extends Cars {
 
     protected boolean turboOn;
 
-
     public Saab95(){
         super(2, 125, Color.red, "Saab95", "North");
         turboOn = false;
-    }
-
-    protected void startEngine(){SetcurrentSpeed(0.1);
     }
 
     protected void setTurboOn(){

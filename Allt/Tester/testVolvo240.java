@@ -14,15 +14,14 @@ public class testVolvo240 {
     }
 
     @Test
-    public void testStartEngine(){
+    public void testStartEngine() {
         volvo240.startEngine();
-        assertTrue(volvo240.getCurrentSpeed()==0.1);
+        assertTrue(volvo240.getCurrentSpeed() == 0.1);
     }
 
     @Test
-    public void testSpeedFactor(){
+    public void testSpeedFactor() {
         double speedfactor = volvo240.speedFactor();
-        assertTrue(speedfactor==1.25);
+        assertTrue(speedfactor == 1.25);
     }
-
 }

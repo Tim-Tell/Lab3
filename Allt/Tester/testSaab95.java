@@ -14,7 +14,7 @@ public class testSaab95 {
         saab95 = new Saab95();
     }
 
-    
+
     @Test
     public void testTurbo(){
         saab95.setTurboOn();
