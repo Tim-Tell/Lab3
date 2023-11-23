@@ -32,6 +32,10 @@ public abstract class Cars implements Movable {
         return nrDoors;
     }
 
+    public String getModelName() {
+        return modelName;
+    }
+
     protected double geteningePower() {
         return enginePower;
     }
@@ -43,7 +47,7 @@ public abstract class Cars implements Movable {
     protected String getDirection() {
         return direction;
     }
-    protected void startEngine() {
+    public void startEngine() {
         currentSpeed = 0.1;
     }
 

@@ -72,7 +72,7 @@ public class testCarTransport {
         carTransport.loadCar(scania);
         carTransport.trailerUp();
         carTransport.startEngine();
-        carTransport.truckMove();
+        carTransport.move();
         assertTrue(carTransport.getPosY() == 0.1);
         assertTrue(scania.getPosY() == 0.1);
     }

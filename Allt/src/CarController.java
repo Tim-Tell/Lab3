@@ -2,12 +2,15 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
+import java.util.Collection;
 
 /*
 * This class represents the Controller part in the MVC pattern.
 * It's responsibilities is to listen to the View and responds in a appropriate manner by
 * modifying the model state and the updating the view.
  */
+
+
 
 public class CarController {
     // member fields:
@@ -21,13 +24,14 @@ public class CarController {
     // The frame that represents this instance View of the MVC pattern
     CarView frame;
     // A list of cars, modify if needed
-    ArrayList<Cars> cars = new ArrayList<>();
+    protected ArrayList<Cars> cars = new ArrayList<>();
+    static CarController cc = new CarController();
+
 
     //methods:
 
     public static void main(String[] args) {
         // Instance of this class
-        CarController cc = new CarController();
 
         cc.cars.add(new Volvo240());
 
@@ -43,10 +47,10 @@ public class CarController {
     * */
     private class TimerListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
-            for (ACar car : cars) {
+            for (Cars car : cars) {
                 car.move();
-                int x = (int) Math.round(car.getPosition().getX());
-                int y = (int) Math.round(car.getPosition().getY());
+                int x = (int) Math.round(car.getPosX());
+                int y = (int) Math.round(car.getPosY());
                 frame.drawPanel.moveit(x, y);
                 // repaint() calls the paintComponent method of the panel
                 frame.drawPanel.repaint();
@@ -54,12 +58,73 @@ public class CarController {
         }
     }
 
+    public boolean isCarOutofBounds {
+
+    }
+
     // Calls the gas method for each car once
     void gas(int amount) {
         double gas = ((double) amount) / 100;
-        for (ACar car : cars
+        for (Cars car : cars
                 ) {
             car.gas(gas);
         }
     }
+
+    void brake (int amount) {
+        double brake= ((double) amount) / 100;
+        for (Cars car : cars) {
+            car.brake(brake);
+        }
+        }
+
+    void startCars() {
+        for (Cars car : cars) {
+            car.startEngine();
+        }
+    }
+
+    void stopCars() {
+        for (Cars car : cars) {
+           car.stopEngine();
+        }
+    }
+
+    void turboOn() {
+        for (Cars car : cars) {
+            if (car instanceof Saab95) {
+                ((Saab95) car).setTurboOn();
+            }
+        }
+    }
+
+    void turboOff() {
+        for (Cars car : cars) {
+            if (car instanceof Saab95) {
+                ((Saab95) car).setTurboOff();
+            }
+        }
+    }
+
+    void trailerUp(double amount) {
+        for (Cars car : cars) {
+            if (car instanceof Scania) {
+                ((Scania) car).trailerUp(amount);
+            }
+        }
+    }
+
+    void trailerDown(double amount) {
+        for (Cars car : cars) {
+            if (car instanceof Scania) {
+                ((Scania) car).trailerDown(amount);
+            }
+        }
+    }
+
+
+
 }
+
+
+

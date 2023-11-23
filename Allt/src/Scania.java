@@ -44,7 +44,8 @@ public class Scania extends Cars {
         return 50;
     }
 
-    public void truckMove(){
+    @Override
+    public void move(){
         if (trailerAngle > 0){
             System.out.println("Truck can't move while trailer is up");
         }

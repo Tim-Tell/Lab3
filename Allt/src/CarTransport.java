@@ -86,8 +86,8 @@ public class CarTransport extends Cars {
             return 25;
         }
     }
-   
-    public void truckMove() {
+   @Override
+    public void move() {
         if (trailerUp == false) {
             System.out.println("Truck cant move when the trailer is down");
         } else {
