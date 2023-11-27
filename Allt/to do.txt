@@ -1,0 +1,7 @@
+Uppgift 1:
+
+Fixa try delen i DrawPanel 
+Kolla om det finns en bättre lösning istället för hashmap i DrawPanel 
+
+Uppgift 2: 
+UML Diagram
