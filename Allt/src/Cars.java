@@ -85,6 +85,14 @@ public abstract class Cars implements Movable {
     }
 
     public void move() {
+        if (posY >= 500) {
+            turnRight();
+            turnRight();
+        }
+        else if (posY <= 0 && direction == "South") {
+            turnRight();
+            turnRight();
+        }
         switch (direction) {
             case "North":
                 posY = posY + currentSpeed;
@@ -157,6 +165,7 @@ public abstract class Cars implements Movable {
 
         }
     }
+
 
     protected void gas(double amount){
 
