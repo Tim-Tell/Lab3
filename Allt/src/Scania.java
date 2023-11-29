@@ -8,7 +8,7 @@ public class Scania extends Cars {
 
     public Scania() {
         super(2, 400, Color.blue, "Scania",
-                "North");
+                "North", 100, 0);
         trailerAngle = 0;
     }
 

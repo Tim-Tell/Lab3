@@ -42,27 +42,8 @@ public class DrawPanel extends JPanel{
         return timPoint;
     }
 
-    // TODO: Make this genereal for all cars
-    void moveit(int x, int y) {
-        carPointVolvo.x = x;
-        carPointVolvo.y = y;
-        carPointScania.x = x;
-        carPointScania.y = y;
-        carPointSaab.x = x;
-        carPointSaab.y = y;
 
-    }
-    public void AddingCarPoints() {
-        for (Cars car : CarController.cc.cars) {
-            if (car instanceof Saab95) {
-                CarPoints.add(carPointSaab);
-            } else if (car instanceof Volvo240) {
-                CarPoints.add(carPointVolvo);
-            } else if (car instanceof Scania) {
-                CarPoints.add(carPointScania);
-            }
-        }
-    }
+
 
     // Initializes the panel and reads the images
     public DrawPanel(int x, int y) {
