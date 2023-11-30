@@ -24,6 +24,8 @@ public abstract class Cars implements Movable {
         this.color = color;
         this.modelName = modelName;
         this.direction = direction;
+        this.posY = posY;
+        this.posX = posX;
         stopEngine();
 
     }
@@ -47,11 +49,10 @@ public abstract class Cars implements Movable {
     protected String getDirection() {
         return direction;
     }
+
     public void startEngine() {
         currentSpeed = 0.1;
     }
-
-
 
     protected double getEnginePower(){
         return enginePower;
@@ -72,6 +73,7 @@ public abstract class Cars implements Movable {
     protected double getPosX(){
         return posX;
     }
+
     protected double getPosY(){
         return posY;
     }
