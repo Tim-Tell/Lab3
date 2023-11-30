@@ -1,5 +1,23 @@
 Analysera de beroenden som finns med avseende på cohesion och coupling, och Dependency Inversion Principle.
-Vilka beroenden ar nödvändiga?
-Vilka klasser är beroende av varandra som inte bör vara det?
-Finns det starkare beroenden an nodvandigt?
-Kan ni identifiera nagra brott mot ovriga designprinciper vi pratat om i kursen?
+-Vilka beroenden ar nödvändiga?
+Alla förutom movable? 
+
+
+
+
+-Vilka klasser är beroende av varandra som inte bör vara det?
+
+
+
+
+-Finns det starkare beroenden an nodvandigt?
+
+
+
+
+-Kan ni identifiera nagra brott mot ovriga designprinciper vi pratat om i kursen?
+
+
+
+import libraries som inte används
+main metod ska ligga i en egen fil
