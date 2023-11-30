@@ -10,7 +10,7 @@ Alla förutom movable?
 
 
 
--Finns det starkare beroenden an nodvandigt?
+-Finns det starkare beroenden än nödvandigt?
 
 
 
