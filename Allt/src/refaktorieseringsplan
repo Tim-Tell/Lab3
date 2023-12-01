@@ -1,0 +1,10 @@
+steg 1: Implementera carApp och flytta dit main metoden.
+
+steg 2:
+Flytta runt beroenden så att rätt sak är beroende av rätt sak: carcontroller ska inte vara beroende av carView, 
+modellen ska bero på carObserver och inte carView, drawPanel ska inte bero på carController, 
+carApp ska bero på modellen, viewn och controllen. 
+
+steg 3:
+Gör eventuella tillägg och ändringar så att alla metoder funkar som de ska när main metoden är på annat ställe och beroenden 
+har ändrats. tex fixa cars listan som görs i carController. ta bort carPoint då den inte används.
