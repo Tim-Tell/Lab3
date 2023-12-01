@@ -1,12 +1,14 @@
 Analysera de beroenden som finns med avseende på cohesion och coupling, och Dependency Inversion Principle.
 -Vilka beroenden ar nödvändiga?
-Alla förutom movable? 
+Alla subklasser till Cars
+CarShop kan endast ta in objekt av typen Cars
+
 
 
 
 
 -Vilka klasser är beroende av varandra som inte bör vara det?
-
+Movable?
 
 
 
@@ -21,3 +23,11 @@ Alla förutom movable?
 
 import libraries som inte används
 main metod ska ligga i en egen fil
+
+att ändra:
+
+- flytta main till applicationen
+- flytta in lista in till main från carcontroller
+- skicka med listan med bilarna till carcontroller objectet
+- 
+
