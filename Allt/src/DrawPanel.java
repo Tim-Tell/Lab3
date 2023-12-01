@@ -2,6 +2,7 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.nio.Buffer;
+import java.util.ArrayList;
 import java.util.HashMap;
 import javax.imageio.ImageIO;
 import javax.swing.*;
@@ -20,6 +21,8 @@ public class DrawPanel extends JPanel{
     BufferedImage SaabImage;
 
     Map<Cars, BufferedImage> carsMap = new HashMap<>();
+
+    //ArrayList<Point> CarPoints = new ArrayList<Point>();
 
     // To keep track of a singel cars position
 
@@ -40,6 +43,7 @@ public class DrawPanel extends JPanel{
     public int getCarPointY(){
         int timPoint = carPoint.y;
         return timPoint;
+
     }
 
 
@@ -62,11 +66,6 @@ public class DrawPanel extends JPanel{
                 ScaniaImage = ImageIO.read(DrawPanel.class.getResourceAsStream("pics/Scania.jpg"));
                 SaabImage = ImageIO.read(DrawPanel.class.getResourceAsStream("pics/Saab95.jpg"));
                 addCars();
-                System.out.println(carsMap);
-
-
-
-
             } catch (IOException ex)
             {
                 ex.printStackTrace();
@@ -78,9 +77,10 @@ public class DrawPanel extends JPanel{
     // This method is called each time the panel updates/refreshes/repaints itself
     // TODO: Change to suit your needs.
     @Override
-    protected void paintComponent(Graphics g) {
-        for (Cars car : carsMap.keySet())       {
+    protected void paintComponent(Graphics g){
         super.paintComponent(g);
-        g.drawImage(carsMap.get(car), carPoint.x, carPoint.y, null); // see javadoc for more info on the parameters
+        for (Cars car : carsMap.keySet()){
+        g.drawImage(carsMap.get(car), (int) car.getPosX(), (int) car.getPosY(), null);// see javadoc for more info on the parameter
     }       }
-}
+    }
+
